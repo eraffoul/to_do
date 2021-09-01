@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>ToDo Item Detail</h1>
+    <ul>
+        Description: {{ todo }}
+    </ul>
+    <ul>
+        Created At: {{ todo.created_at }}
+    </ul>
+
+    <ul>
+        <a href="{% url 'remove' todo.id %}">DEL</a>
+        <a href="{% url 'index'  %}">Back Home</a>
+    </ul>
+{% endblock %}
